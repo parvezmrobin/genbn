@@ -32,9 +32,9 @@ print('Split sizes:', *map(len, datasets.values()))
 
 # Tokenize
 # %%
-from transformers import AutoTokenizer
+from transformers import PreTrainedTokenizerFast
 
-tokenizer = AutoTokenizer.from_pretrained('../tokenizers/word-piece.json')
+tokenizer = PreTrainedTokenizerFast(tokenizer_file='../tokenizers/word-piece.json')
 
 
 # %%
