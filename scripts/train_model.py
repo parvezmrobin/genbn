@@ -87,6 +87,13 @@ training_args = TrainingArguments(
     evaluation_strategy=IntervalStrategy.EPOCH,
     learning_rate=2e-5,
     weight_decay=0.01,
+    warmup_steps=100,
+    log_level='info',
+
+    load_best_model_at_end=True,
+    metric_for_best_model='bleu',
+    greater_is_better=True,
+    auto_find_batch_size=True,
 )
 
 trainer = Trainer(
